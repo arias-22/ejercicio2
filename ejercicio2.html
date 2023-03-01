@@ -1,0 +1,16 @@
+<script>
+    let palabra = prompt("Ingresa una palabra: ")
+
+    function esPalindromo(palabra) {
+
+        palabra = palabra.toLowerCase();
+
+        for (let i = 0; i < palabra.length / 2; i++) {
+            if (palabra[i] !== palabra[palabra.length - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    alert(`La palabra: "${palabra}" ${esPalindromo(palabra) == true ? "es palindromo" : "no es palindromo"}`);
+</script>
